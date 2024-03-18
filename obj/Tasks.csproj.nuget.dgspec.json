@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\lesson2.csproj": {}
+    "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\Tasks.csproj": {}
   },
   "projects": {
-    "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\lesson2.csproj": {
+    "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\Tasks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\lesson2.csproj",
-        "projectName": "lesson2",
-        "projectPath": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\lesson2.csproj",
+        "projectUniqueName": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\Tasks.csproj",
+        "projectName": "Tasks",
+        "projectPath": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\Tasks.csproj",
         "packagesPath": "C:\\Users\\The user\\.nuget\\packages\\",
-        "outputPath": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\obj\\",
+        "outputPath": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

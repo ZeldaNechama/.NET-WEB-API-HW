@@ -1,4 +1,4 @@
-namespace lesson2.Models;
+namespace tasks.Models;
 
 public class MyTask
 {

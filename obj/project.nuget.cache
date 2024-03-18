@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zCICztOqQJKCgWb7Hzrbg6bVXz+lrDNGuzwVOS2O5NUUTGsJWQVwuLDNO9z3RpGQ7eDxQZE0wRJel7iHoD51cQ==",
+  "dgSpecHash": "COGhN09vlSkTVT0kVpaxgN35u4OvBVcShgqSOjJE+cBoa2+U3lF/XPX5hSqRbMPOtUeO06NGGoB6NolDS/bZ0A==",
   "success": true,
-  "projectFilePath": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson2\\lesson2.csproj",
+  "projectFilePath": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\lesson2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
