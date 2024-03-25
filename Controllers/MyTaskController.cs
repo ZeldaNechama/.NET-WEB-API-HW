@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using tasks.Models;
 using tasks.Interfaces;
@@ -14,11 +12,11 @@ public class MyTaskController : ControllerBase
 
     public MyTaskController(IMyTasksServices myTaskService)
     {
-        this.myTaskService = myTaskService;
+        this.myTaskService=myTaskService;
     }
     
     [HttpGet]
-    public ActionResult<IEnumerable<MyTask>> Get()
+    public ActionResult<List<MyTask>> Get()
     {
         return myTaskService.GetAll();
     }
