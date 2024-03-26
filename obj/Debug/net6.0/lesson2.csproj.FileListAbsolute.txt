@@ -53,3 +53,4 @@ E:\שב תכנות\שנה ב\core .Net\שיעורי בית\lesson3_\Tasks\.NET-W
 E:\שב תכנות\שנה ב\core .Net\שיעורי בית\lesson3_\Tasks\.NET-WEB-API-HW\obj\Debug\net6.0\lesson2.genruntimeconfig.cache
 E:\שב תכנות\שנה ב\core .Net\שיעורי בית\lesson3_\Tasks\.NET-WEB-API-HW\obj\Debug\net6.0\ref\lesson2.dll
 E:\שב תכנות\שנה ב\core .Net\שיעורי בית\lesson3_\Tasks\.NET-WEB-API-HW\bin\Debug\net6.0\lesson2.staticwebassets.runtime.json
+E:\שב תכנות\שנה ב\core .Net\שיעורי בית\lesson3_\Tasks\.NET-WEB-API-HW\bin\Debug\net6.0\tasks.json
