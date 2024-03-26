@@ -1,4 +1,4 @@
-const uri = '/tasks';
+const uri='/MyTask';
 let tasks = [];
 
 function getItems() {
