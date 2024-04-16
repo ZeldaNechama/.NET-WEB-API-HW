@@ -12,7 +12,7 @@ public class MyTaskServicesToFile : IMyTasksServices
     private string filePath;
     public MyTaskServicesToFile(IWebHostEnvironment webHost)
     {
-        this.filePath = Path.Combine(webHost.ContentRootPath, "Data", "tasks.json");
+        this.filePath = Path.Combine(/*webHost.ContentRootPath,*/ "Data", "tasks.json");
         using (var jsonFile = File.OpenText(filePath))
         {
             this.mytasks = JsonSerializer.Deserialize<List<MyTask>>(jsonFile.ReadToEnd(),
@@ -25,7 +25,7 @@ public class MyTaskServicesToFile : IMyTasksServices
         }
     }
 
-    private void saveToFile()
+    private void SaveToFile()
     {
         File.WriteAllText(filePath, JsonSerializer.Serialize(mytasks));
     }
@@ -37,7 +37,7 @@ public class MyTaskServicesToFile : IMyTasksServices
     {
         myTask.Id = mytasks.Count() + 1;
         mytasks.Add(myTask);
-        saveToFile();
+        SaveToFile();
         return myTask.Id;
     }
 
@@ -48,7 +48,7 @@ public class MyTaskServicesToFile : IMyTasksServices
             return;
 
         mytasks.Remove(myTask);
-        saveToFile();
+        SaveToFile();
     }
 
     public void Put(int id, MyTask myTask)
@@ -58,7 +58,7 @@ public class MyTaskServicesToFile : IMyTasksServices
             return;
 
         mytasks[index] = myTask;
-        saveToFile();
+        SaveToFile();
     }
 
 
