@@ -1,3 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace tasks.Services;
 
@@ -26,4 +34,3 @@ public class LoginServices
         public static string WriteToken(SecurityToken token) =>
             new JwtSecurityTokenHandler().WriteToken(token);
     }
-}

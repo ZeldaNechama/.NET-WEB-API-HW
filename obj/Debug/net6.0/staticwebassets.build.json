@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8JF+Q4tmYT/RSJyho2FuDE6NEuyBCP/1iM5ZuXfUUvU=",
+  "Hash": "AhTIr6kXpjaPg+Mfe8NG4omKlbDFrFA32gI/bZrkCC8=",
   "Source": "lesson2",
   "BasePath": "_content/lesson2",
   "Mode": "Default",
@@ -34,23 +34,6 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\data\\tasks.json",
-      "SourceId": "lesson2",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\",
-      "BasePath": "_content/lesson2",
-      "RelativePath": "data/tasks.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\data\\tasks.json"
-    },
-    {
       "Identity": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\index.html",
       "SourceId": "lesson2",
       "SourceType": "Discovered",
@@ -68,6 +51,23 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
+      "Identity": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\js\\login.js",
+      "SourceId": "lesson2",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\",
+      "BasePath": "_content/lesson2",
+      "RelativePath": "js/login.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\login.js"
+    },
+    {
       "Identity": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\js\\site.js",
       "SourceId": "lesson2",
       "SourceType": "Discovered",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\login.html",
+      "SourceId": "lesson2",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\",
+      "BasePath": "_content/lesson2",
+      "RelativePath": "login.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\login.html"
     }
   ]
 }

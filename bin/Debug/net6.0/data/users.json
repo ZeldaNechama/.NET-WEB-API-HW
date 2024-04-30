@@ -1,9 +1,43 @@
 [
-    
-        {
-            "Id": 1,
-            "Name": "aaa",
-            "Password": ""
-        }
-    
+    {
+        "Id": 1,
+        "Name": "aaa",
+        "Password": "",
+        "IsAdmin": false,
+        "TasksList": null
+    },
+    {
+        "Id": 2,
+        "Name": "string",
+        "Password": "string",
+        "IsAdmin": false,
+        "TasksList": null
+    },
+    {
+        "Id": 3,
+        "Name": "Chaim Choen",
+        "Password": "c12h@nfdmf",
+        "IsAdmin": false,
+        "TasksList": null
+    },
+    {
+        "Id": 4,
+        "Name": "Leah",
+        "Password": "jdfsdks@!hjjfw",
+        "IsAdmin": false,
+        "TasksList": null
+    },
+    {
+        "Id": 5,
+        "Name": "zn",
+        "Password": "zndbvkwk@#vhvbj",
+        "IsAdmin": true,
+        "TasksList": [
+            {
+                "Id": 1,
+                "Name": "finish project",
+                "IsDone": false
+            }
+        ]
+    }
 ]
