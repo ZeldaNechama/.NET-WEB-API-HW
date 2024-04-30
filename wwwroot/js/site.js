@@ -1,22 +1,29 @@
-const uri='/MyTask';
+const uri = '/MyTask';
 let tasks = [];
 
-function getItems() {
-    fetch(uri)
-        .then(response => response.json())
-        .then(data => _displayItems(data))
-        .catch(error => console.error('Unable to get items.', error));
+const uri_user='/User';
+const authToken = localStorage.getItem('authToken');
+
+if (!authToken) {
+    window.location.href = '/login.html';
 }
+else {
+    function getItems() {
+        fetch(uri)
+            .then(response => response.json())
+            .then(data => _displayItems(data))
+            .catch(error => console.error('Unable to get items.', error));
+    }
 
-function addItem() {
-    const addNameTextbox = document.getElementById('add-name');
+    function addItem() {
+        const addNameTextbox = document.getElementById('add-name');
 
-    const item = {
-        isDone: false,
-        name: addNameTextbox.value.trim()
-    };
+        const item = {
+            isDone: false,
+            name: addNameTextbox.value.trim()
+        };
 
-    fetch(uri, {
+        fetch(uri, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -24,40 +31,40 @@ function addItem() {
             },
             body: JSON.stringify(item)
         })
-        .then(response => response.json())
-        .then(() => {
-            getItems();
-            addNameTextbox.value = '';
-        })
-        .catch(error => console.error('Unable to add item.', error));
-}
+            .then(response => response.json())
+            .then(() => {
+                getItems();
+                addNameTextbox.value = '';
+            })
+            .catch(error => console.error('Unable to add item.', error));
+    }
 
-function deleteItem(id) {
-    fetch(`${uri}/${id}`, {
+    function deleteItem(id) {
+        fetch(`${uri}/${id}`, {
             method: 'DELETE'
         })
-        .then(() => getItems())
-        .catch(error => console.error('Unable to delete item.', error));
-}
+            .then(() => getItems())
+            .catch(error => console.error('Unable to delete item.', error));
+    }
 
-function displayEditForm(id) {
-    const item = tasks.find(item => item.id === id);
+    function displayEditForm(id) {
+        const item = tasks.find(item => item.id === id);
 
-    document.getElementById('edit-name').value = item.name;
-    document.getElementById('edit-id').value = item.id;
-    document.getElementById('edit-isDone').checked = item.isDone;
-    document.getElementById('editForm').style.display = 'block';
-}
+        document.getElementById('edit-name').value = item.name;
+        document.getElementById('edit-id').value = item.id;
+        document.getElementById('edit-isDone').checked = item.isDone;
+        document.getElementById('editForm').style.display = 'block';
+    }
 
-function updateItem() {
-    const itemId = document.getElementById('edit-id').value;
-    const item = {
-        id: parseInt(itemId, 10),
-        isDone: document.getElementById('edit-isDone').checked,
-        name: document.getElementById('edit-name').value.trim()
-    };
+    function updateItem() {
+        const itemId = document.getElementById('edit-id').value;
+        const item = {
+            id: parseInt(itemId, 10),
+            isDone: document.getElementById('edit-isDone').checked,
+            name: document.getElementById('edit-name').value.trim()
+        };
 
-    fetch(`${uri}/${itemId}`, {
+        fetch(`${uri}/${itemId}`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -65,61 +72,102 @@ function updateItem() {
             },
             body: JSON.stringify(item)
         })
-        .then(() => getItems())
-        .catch(error => console.error('Unable to update item.', error));
+            .then(() => getItems())
+            .catch(error => console.error('Unable to update item.', error));
 
-    closeInput();
+        closeInput();
 
-    return false;
-}
+        return false;
+    }
 
-function closeInput() {
-    document.getElementById('editForm').style.display = 'none';
-}
+    function closeInput() {
+        document.getElementById('editForm').style.display = 'none';
+    }
 
-function _displayCount(itemCount) {
-    const name = (itemCount === 1) ? 'task' : 'task kinds';
+    function _displayCount(itemCount) {
+        const name = (itemCount === 1) ? 'task' : 'task kinds';
 
-    document.getElementById('counter').innerText = `${itemCount} ${name}`;
-}
+        document.getElementById('counter').innerText = `${itemCount} ${name}`;
+    }
 
-function _displayItems(data) {
-    const tBody = document.getElementById('tasks');
-    tBody.innerHTML = '';
+    function _displayItems(data) {
+        const tBody = document.getElementById('tasks');
+        tBody.innerHTML = '';
 
-    _displayCount(data.length);
+        _displayCount(data.length);
 
-    const button = document.createElement('button');
+        const button = document.createElement('button');
 
-    data.forEach(item => {
-        let isDoneCheckbox = document.createElement('input');
-        isDoneCheckbox.type = 'checkbox';
-        isDoneCheckbox.disabled = true;
-        isDoneCheckbox.checked = item.isDone;
+        data.forEach(item => {
+            let isDoneCheckbox = document.createElement('input');
+            isDoneCheckbox.type = 'checkbox';
+            isDoneCheckbox.disabled = true;
+            isDoneCheckbox.checked = item.isDone;
 
-        let editButton = button.cloneNode(false);
-        editButton.innerText = 'Edit';
-        editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
+            let editButton = button.cloneNode(false);
+            editButton.innerText = 'Edit';
+            editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
 
-        let deleteButton = button.cloneNode(false);
-        deleteButton.innerText = 'Delete';
-        deleteButton.setAttribute('onclick', `deleteItem(${item.id})`);
+            let deleteButton = button.cloneNode(false);
+            deleteButton.innerText = 'Delete';
+            deleteButton.setAttribute('onclick', `deleteItem(${item.id})`);
 
-        let tr = tBody.insertRow();
+            let tr = tBody.insertRow();
 
-        let td1 = tr.insertCell(0);
-        td1.appendChild(isDoneCheckbox);
+            let td1 = tr.insertCell(0);
+            td1.appendChild(isDoneCheckbox);
 
-        let td2 = tr.insertCell(1);
-        let textNode = document.createTextNode(item.name);
-        td2.appendChild(textNode);
+            let td2 = tr.insertCell(1);
+            let textNode = document.createTextNode(item.name);
+            td2.appendChild(textNode);
 
-        let td3 = tr.insertCell(2);
-        td3.appendChild(editButton);
+            let td3 = tr.insertCell(2);
+            td3.appendChild(editButton);
 
-        let td4 = tr.insertCell(3);
-        td4.appendChild(deleteButton);
-    });
+            let td4 = tr.insertCell(3);
+            td4.appendChild(deleteButton);
+        });
 
-    tasks = data;
-}
+        tasks = data;
+    }
+
+    fetch(uri_user, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+    })
+        .then(response => response.json())
+        .then(() => {
+            getUsers();
+        })
+        .catch(error => console.error('Unable to access users.', error));
+    function getUsers()
+    {
+        fetch(uri)
+            .then(response => response.json())
+            .then(data => _displayItems(data))
+            .catch(error => console.error('Unable to get items.', error));
+    }
+
+    }
+    function displayUsersList(data){
+        const list=document.getElementById('users-list');
+        data.forEach(user => {
+            const li=document.createElement('li');
+            const password=localStorage.getItem(u.id);
+            if(user.password==password){
+                li.innerHTML='/MyTask';
+                list.appendChild(li);
+            }
+        });
+    }
+
+    if(user.isAdmim==true){
+        getUsers();
+    }
+
+
+
