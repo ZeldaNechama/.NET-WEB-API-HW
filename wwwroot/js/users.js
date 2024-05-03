@@ -1,26 +1,47 @@
-const uri = '/MyTask';
-let tasks = [];
+const uri = '/Users';
+let users = [];
 
-const uri_user = '/User';
+//const uri_user = '/User';
 const authToken = localStorage.getItem('authToken');
 
-if (!authToken) {
-    window.location.href = '/login.html';
-}
-else {
-    function getItems() {
+
+    function getUsers() {
         fetch(uri)
             .then(response => response.json())
-            .then(data => _displayItems(data))
+            .then(data => _displayUsers(data))
             .catch(error => console.error('Unable to get items.', error));
     }
 
-    function addItem() {
-        const addNameTextbox = document.getElementById('add-name');
 
-        const item = {
-            isDone: false,
-            name: addNameTextbox.value.trim()
+    fetch(`${uri}/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userId)
+    })
+        .then(() => display_Users())
+        .catch(error => console.error('Unable to get tasks list.', error));
+
+  
+        function display_Users(){
+            const list=document.getElementById('tasks-list');
+            const li=document.createElement('li');
+            li.innerHTML=uri+"/"+userId;
+            list.appendChild(li);
+        }
+
+
+    function addUser() {
+        const addNameTextbox = document.getElementById('add-name');
+        const addPasswordTextBox=document.getElementById('add-password');
+
+        const user = {
+            isAdmin: false,
+            name: addNameTextbox.value.trim(),
+            password:addPasswordTextBox.value.trim(),
+            tasksList:null
         };
 
         fetch(uri, {
@@ -29,21 +50,22 @@ else {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(item)
+            body: JSON.stringify(user)
         })
             .then(response => response.json())
             .then(() => {
-                getItems();
+                getUsers();
                 addNameTextbox.value = '';
+                addPasswordTextBox.value='';
             })
             .catch(error => console.error('Unable to add item.', error));
     }
 
-    function deleteItem(id) {
+    function deleteUser(id) {
         fetch(`${uri}/${id}`, {
             method: 'DELETE'
         })
-            .then(() => getItems())
+            .then(() => getUsers())
             .catch(error => console.error('Unable to delete item.', error));
     }
 
@@ -56,23 +78,24 @@ else {
         document.getElementById('editForm').style.display = 'block';
     }
 
-    function updateItem() {
-        const itemId = document.getElementById('edit-id').value;
-        const item = {
-            id: parseInt(itemId, 10),
-            isDone: document.getElementById('edit-isDone').checked,
-            name: document.getElementById('edit-name').value.trim()
+    function updateUser() {
+        const userId = document.getElementById('edit-id').value;
+        const user = {
+            id: parseInt(userId, 10),
+            isAdmin: document.getElementById('edit-isAdmin').checked,
+            name: document.getElementById('edit-name').value.trim(),
+            password:document.getElementById('edit-isAdmin')
         };
 
-        fetch(`${uri}/${itemId}`, {
+        fetch(`${uri}/${userId}`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(item)
+            body: JSON.stringify(user)
         })
-            .then(() => getItems())
+            .then(() => getUsers())
             .catch(error => console.error('Unable to update item.', error));
 
         closeInput();
@@ -85,51 +108,55 @@ else {
     }
 
     function _displayCount(itemCount) {
-        const name = (itemCount === 1) ? 'task' : 'task kinds';
+        const name = (itemCount === 1) ? 'user' : 'user kinds';
 
         document.getElementById('counter').innerText = `${itemCount} ${name}`;
     }
 
-    function _displayItems(data) {
-        const tBody = document.getElementById('tasks');
+    function _displayUsers(data) {
+        const tBody = document.getElementById('users');
         tBody.innerHTML = '';
 
         _displayCount(data.length);
 
         const button = document.createElement('button');
 
-        data.forEach(item => {
-            let isDoneCheckbox = document.createElement('input');
-            isDoneCheckbox.type = 'checkbox';
-            isDoneCheckbox.disabled = true;
-            isDoneCheckbox.checked = item.isDone;
+        data.forEach(user => {
+            let isAdminCheckbox = document.createElement('input');
+            isAdminCheckbox.type = 'checkbox';
+            isAdminCheckbox.disabled = true;
+            isAdminCheckbox.checked = user.isAdmin;
 
             let editButton = button.cloneNode(false);
             editButton.innerText = 'Edit';
-            editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
+            editButton.setAttribute('onclick', `displayEditForm(${user.id})`);
 
             let deleteButton = button.cloneNode(false);
             deleteButton.innerText = 'Delete';
-            deleteButton.setAttribute('onclick', `deleteItem(${item.id})`);
+            deleteButton.setAttribute('onclick', `deleteUser(${user.id})`);
 
             let tr = tBody.insertRow();
 
             let td1 = tr.insertCell(0);
-            td1.appendChild(isDoneCheckbox);
+            td1.appendChild(isAdminCheckbox);
 
             let td2 = tr.insertCell(1);
-            let textNode = document.createTextNode(item.name);
+            let textNode = document.createTextNode(user.name);
             td2.appendChild(textNode);
 
             let td3 = tr.insertCell(2);
-            td3.appendChild(editButton);
+            let textNode2 = document.createTextNode(user.password);
+            td2.appendChild(textNode2);
 
             let td4 = tr.insertCell(3);
-            td4.appendChild(deleteButton);
+            td4.appendChild(editButton);
+
+            let td5 = tr.insertCell(4);
+            td5.appendChild(deleteButton);
         });
 
-        tasks = data;
-    }
+        users = data;
+   
 
     //     fetch(uri_user, {
     //         method: 'GET',

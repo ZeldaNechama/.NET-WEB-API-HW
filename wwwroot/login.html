@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -18,9 +18,35 @@
     </a>
     
     <script src="js/login.js" asp-append-version="true"></script>
-    <!-- <script type="text/javascript">
-       getInfo();
-    </script> -->
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form action="javascript:void(0);" method="POST" onsubmit="findUser()">
+        <input type="text" id="name" placeholder="Enter your user name">
+        <input type="password" id="password" placeholder="Enter your password">
+        <input type="submit" value="Login">
+    </form>
+
+    <p id="error-message" style="color: red;"></p>
+
+    <a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">
+        <button>Open Postman</button>
+    </a>
+
+
+    <script src="js/login.js" asp-append-version="true"></script>
 </body>
 
 </html>

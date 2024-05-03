@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using tasks.Models;
 using tasks.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace tasks.Controllers;
 
@@ -15,12 +16,19 @@ public class UserController : ControllerBase
         this.userService=userService;
     }
     
+    [Authorize(Policy = "Admin")] 
     [HttpGet]
     public ActionResult<List<User>> Get()
     {
         return userService.GetAll();
     }
     
+    [HttpGet]
+    public ActionResult<List<MyTask>> GetTasks(int id)
+    {
+        return userService.GetTasks(id);
+    }
+
     [HttpGet("{id}")]
     public ActionResult<User> Get(int id)
     {
@@ -29,7 +37,7 @@ public class UserController : ControllerBase
             return NotFound();
         return Ok(user);       
     }
-        
+    [Authorize(Policy = "Admin")]    
     [HttpPost]
     public IActionResult Post(User newUser)
     {
@@ -43,7 +51,8 @@ public class UserController : ControllerBase
         userService.Put(id, newUser);
         return Ok();
     }
-        
+
+    [Authorize(Policy = "Admin")]    
     [HttpDelete("{id}")]
     public ActionResult Delete(int id)
     {

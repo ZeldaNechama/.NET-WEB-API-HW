@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services
      .AddAuthentication(options =>
      {
@@ -22,17 +23,18 @@ builder.Services
 builder.Services.AddAuthorization(cfg =>
    {
        cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin"));
-       cfg.AddPolicy("User", policy => policy.RequireClaim("type", "User"));
-       cfg.AddPolicy("ClearanceLevel1", policy => policy.RequireClaim("ClearanceLevel", "1", "2"));
-       cfg.AddPolicy("ClearanceLevel2", policy => policy.RequireClaim("ClearanceLevel", "2"));
+       cfg.AddPolicy("User", policy => policy.RequireClaim("User", "Admin","User"));
    });
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
       {
-          c.SwaggerDoc("v1", new OpenApiInfo { Title = "FBI", Version = "v1" });
+          c.SwaggerDoc("v1", new OpenApiInfo { Title = "TASKS", Version = "v1" });
           c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
           {
               In = ParameterLocation.Header,
@@ -51,11 +53,7 @@ builder.Services.AddSwaggerGen(c =>
       });
 
 
-
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// builder.Services.AddSwaggerGen();
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Services.AddTask();
@@ -69,13 +67,18 @@ app.UseMyLogMiddleware();
 
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    // app.UseSwaggerUI();
+//}
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "TASKS API V1");
+});
 
 app.UseHttpsRedirection();
+
 
 // js
 app.UseDefaultFiles();

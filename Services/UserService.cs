@@ -31,6 +31,9 @@ public class UserService : IUserService
 
     public User Get(int id) => users.FirstOrDefault(u => u.Id == id);
 
+     public List<MyTask> GetTasks(int id) => users.Where(u => u.Id == id).SelectMany(u => u.TasksList).ToList();
+
+
     public int Post(User user)
     {
         user.Id = users.Count() + 1;

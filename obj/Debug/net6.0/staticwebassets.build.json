@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AhTIr6kXpjaPg+Mfe8NG4omKlbDFrFA32gI/bZrkCC8=",
+  "Hash": "3fOv73/T+dSuuSsREbPGIrLkoz7gXPYOEx9mFUzqWng=",
   "Source": "lesson2",
   "BasePath": "_content/lesson2",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
+      "Identity": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\js\\users.js",
+      "SourceId": "lesson2",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\",
+      "BasePath": "_content/lesson2",
+      "RelativePath": "js/users.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\users.js"
+    },
+    {
       "Identity": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\login.html",
       "SourceId": "lesson2",
       "SourceType": "Discovered",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\login.html"
+    },
+    {
+      "Identity": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\users.html",
+      "SourceId": "lesson2",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\wwwroot\\",
+      "BasePath": "_content/lesson2",
+      "RelativePath": "users.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\users.html"
     }
   ]
 }
