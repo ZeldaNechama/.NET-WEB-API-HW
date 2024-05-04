@@ -3,6 +3,8 @@ using tasks.Controllers;
 using tasks.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
+using tasks.Middlewres;
+using Microsoft.Extensions.Logging;
 
 
 
@@ -55,6 +57,10 @@ builder.Services.AddSwaggerGen(c =>
 
 // builder.Services.AddSwaggerGen();
 builder.Logging.ClearProviders();
+//builder.Logging.Add("log.log");
+
+// Register middleware
+//builder.Services.AddMiddleware<WriteToLOgMiddlleware>();
 builder.Logging.AddConsole();
 builder.Services.AddTask();
 builder.Services.AddUser();
@@ -63,7 +69,9 @@ builder.Services.AddUser();
 
 var app = builder.Build();
 
-app.UseMyLogMiddleware();
+//app.UseMyLogMiddleware();
+// app.useWriteToLOgMiddlleware();
+ app.UseMiddleware<WriteToLOgMiddlleware>();//logs/requestlog.log
 
 
 // Configure the HTTP request pipeline.

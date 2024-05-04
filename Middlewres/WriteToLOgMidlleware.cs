@@ -16,14 +16,16 @@ public class WriteToLOgMiddlleware
 
     public async Task Invoke(HttpContext c)
     {
+        var dt = DateTime.Now;
         var sw = new Stopwatch();
         sw.Start();
         await next.Invoke(c);
         logger.LogDebug($"{c.Request.Path}.{c.Request.Method} took {sw.ElapsedMilliseconds}ms."
             + $" User: {c.User?.FindFirst("userId")?.Value ?? "unknown"}");
-        
+
+
     }
 
-    
+
 
 }
