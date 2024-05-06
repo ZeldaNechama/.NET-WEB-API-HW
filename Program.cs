@@ -24,7 +24,7 @@ builder.Services
 
 builder.Services.AddAuthorization(cfg =>
    {
-       cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin"));
+       cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin","User"));
        cfg.AddPolicy("User", policy => policy.RequireClaim("type",  "User"));
    });
 
@@ -69,6 +69,7 @@ builder.Services.AddUser();
 
 var app = builder.Build();
 
+//
 app.LogMiddleware("log.log");
 
 //Configure the HTTP request pipeline.

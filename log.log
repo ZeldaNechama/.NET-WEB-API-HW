@@ -1,0 +1,137 @@
+/users.html.GET took 93ms. User: unknown
+/css/site.css.GET took 9ms. User: unknown
+/js/users.js.GET took 9ms. User: unknown
+/User.GET took 392ms. User: chaim choen
+/users.html.GET took 2ms. User: unknown
+/css/site.css.GET took 3ms. User: unknown
+/js/users.js.GET took 3ms. User: unknown
+/User.GET took 23ms. User: unknown
+/users.html.GET took 4ms. User: unknown
+/js/users.js.GET took 2ms. User: unknown
+/css/site.css.GET took 3ms. User: unknown
+/User.GET took 4ms. User: unknown
+/index.html.GET took 26ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 3ms. User: unknown
+/login.html.GET took 3ms. User: unknown
+/css/site.css.GET took 33ms. User: unknown
+/js/login.js.GET took 36ms. User: unknown
+/Login.POST took 68ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 4ms. User: unknown
+/js/site.js.GET took 3ms. User: unknown
+/MyTask.GET took 17ms. User: chaim choen
+/MyTask.POST took 0ms. User: unknown
+/index.html.GET took 46ms. User: unknown
+/js/site.js.GET took 5ms. User: unknown
+/css/site.css.GET took 5ms. User: unknown
+/MyTask.GET took 262ms. User: chaim choen
+/index.html.GET took 13ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/MyTask.GET took 3ms. User: chaim choen
+/MyTask.POST took 10ms. User: unknown
+/index.html.GET took 3ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 9ms. User: unknown
+/MyTask.GET took 5ms. User: chaim choen
+/index.html.GET took 2ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 6ms. User: unknown
+/login.html.GET took 3ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 2ms. User: unknown
+/Login.POST took 54ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 3ms. User: unknown
+/MyTask.GET took 1ms. User: chaim choen
+/MyTask.POST took 0ms. User: unknown
+/index.html/Swagger.GET took 0ms. User: unknown
+/Swagger.GET took 4ms. User: unknown
+/Swagger/index.html.GET took 62ms. User: unknown
+/Swagger/swagger-ui.css.GET took 75ms. User: unknown
+/Swagger/swagger-ui-standalone-preset.js.GET took 156ms. User: unknown
+/Swagger/swagger-ui-bundle.js.GET took 224ms. User: unknown
+/swagger/v1/swagger.json.GET took 141ms. User: unknown
+/Login.POST took 4ms. User: unknown
+/MyTask.POST took 213ms. User: chaim choen
+/MyTask/1.GET took 10ms. User: chaim choen
+/index.html.GET took 3ms. User: unknown
+/js/site.js.GET took 82ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/MyTask.GET took 2ms. User: chaim choen
+/MyTask/7.DELETE took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask/7.DELETE took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask/7.DELETE took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask/7.DELETE took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask/7.PUT took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/users.html.GET took 3ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/users.js.GET took 6ms. User: unknown
+/User.GET took 6ms. User: chaim choen
+/User.GET took 0ms. User: chaim choen
+/users.html.GET took 47ms. User: unknown
+/css/site.css.GET took 5ms. User: unknown
+/js/users.js.GET took 5ms. User: unknown
+/User.GET took 269ms. User: chaim choen
+/index.html.GET took 13ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 9ms. User: chaim choen
+/index.html.GET took 3ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/login.html.GET took 1ms. User: unknown
+/js/login.js.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/Login.POST took 37ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/MyTask.GET took 4ms. User: chaim choen
+/MyTask/7.PUT took 4ms. User: unknown
+/MyTask.GET took 1ms. User: chaim choen
+/index.html.GET took 84ms. User: unknown
+/js/site.js.GET took 9ms. User: unknown
+/css/site.css.GET took 9ms. User: unknown
+/MyTask.GET took 278ms. User: chaim choen
+/index.html.GET took 16ms. User: unknown
+/css/site.css.GET took 4ms. User: unknown
+/js/site.js.GET took 3ms. User: unknown
+/login.html.GET took 3ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/login.js.GET took 1ms. User: unknown
+/Login.POST took 50ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 3ms. User: unknown
+/MyTask.GET took 7ms. User: chaim choen
+/MyTask/7.PUT took 5ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask/7.PUT took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/Login.POST took 3ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 8ms. User: unknown
+/js/site.js.GET took 6ms. User: unknown
+/MyTask.GET took 2ms. User: chaim choen
+/MyTask/2.PUT took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/Swagger.GET took 5ms. User: unknown
+/Swagger/index.html.GET took 56ms. User: unknown
+/Swagger/swagger-ui.css.GET took 80ms. User: unknown
+/Swagger/swagger-ui-standalone-preset.js.GET took 145ms. User: unknown
+/Swagger/swagger-ui-bundle.js.GET took 228ms. User: unknown
+/swagger/v1/swagger.json.GET took 161ms. User: unknown
+/Login.POST took 3ms. User: unknown
+/MyTask.POST took 75ms. User: chaim choen
+/MyTask/8.GET took 4ms. User: chaim choen
+/MyTask/8.PUT took 9ms. User: chaim choen
+/MyTask/8.DELETE took 31ms. User: chaim choen

@@ -10,7 +10,6 @@ namespace tasks.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-//[Authorize(Policy = "User")]
 public class LoginController : ControllerBase
 {
     IUserService userService;

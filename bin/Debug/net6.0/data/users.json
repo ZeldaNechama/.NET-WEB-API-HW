@@ -39,5 +39,18 @@
                 "IsDone": false
             }
         ]
+    },
+    {
+        "Id": 6,
+        "Name": "chaim choen",
+        "Password": "1223448hghg",
+        "IsAdmin": false,
+        "TasksList": [
+            {
+                "Id": 0,
+                "Name": "Fix the phone",
+                "IsDone": false
+            }
+        ]
     }
 ]

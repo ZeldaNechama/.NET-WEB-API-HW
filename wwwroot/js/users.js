@@ -6,8 +6,7 @@ const authToken = localStorage.getItem('authToken');
 
 getUsers();
     function getUsers() {
-        console.log(authToken);
-         var myHeaders = new Headers();
+        var myHeaders = new Headers();
         myHeaders.append("Authorization", "Bearer " + authToken);
         myHeaders.append("Content-Type", "application/json");
         var requestOptions = {
@@ -21,27 +20,6 @@ getUsers();
             .catch(error => console.error('Unable to get items.', error));
     }
 
-
-    // fetch(`${uri}/${userId}`, {
-    //     method: 'GET',
-    //     headers: {
-    //         'Accept': 'application/json',
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify(userId)
-    // })
-    //     .then(() => display_Users())
-    //     .catch(error => console.error('Unable to get tasks list.', error));
-
-  
-        // function display_Users(){
-        //     const list=document.getElementById('tasks-list');
-        //     const li=document.createElement('li');
-        //     li.innerHTML=uri+"/"+userId;
-        //     list.appendChild(li);
-        // }
-
-
     function addUser() {
         const addNameTextbox = document.getElementById('add-name');
         const addPasswordTextBox=document.getElementById('add-password');
@@ -53,6 +31,7 @@ getUsers();
             tasksList:null,
             id:0
         };
+        
 
         fetch(uri, {
             method: 'POST',

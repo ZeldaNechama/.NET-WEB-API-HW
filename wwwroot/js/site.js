@@ -9,12 +9,20 @@ if (!authToken) {
 }
 else {
     function getItems() {
-        fetch(uri)
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer " + authToken);
+        myHeaders.append("Content-Type", "application/json");
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+        fetch(uri, requestOptions)
             .then(response => response.json())
             .then(data => _displayItems(data))
             .catch(error => console.error('Unable to get items.', error));
     }
-
+    
     function addItem() {
         const addNameTextbox = document.getElementById('add-name');
 
@@ -31,7 +39,8 @@ else {
             },
             body: JSON.stringify(item)
         })
-            .then(response => response.json())
+            .then(response =>
+                response.json())
             .then(() => {
                 getItems();
                 addNameTextbox.value = '';
@@ -130,43 +139,5 @@ else {
 
         tasks = data;
     }
-
-    //     fetch(uri_user, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(item)
-    //     })
-    //         .then(response => response.json())
-    //         .then(() => {
-    //             getUsers();
-    //         })
-    //         .catch(error => console.error('Unable to access users.', error));
-
-    //     function getUsers() {
-    //         fetch(uri)
-    //             .then(response => response.json())
-    //             .then(data => displayUsersList(data))
-    //             .catch(error => console.error('Unable to get items.', error));
-    //     }
-
-
-    // function displayUsersList(data) {
-    //     const list = document.getElementById('users-list');
-    //     data.forEach(user => {
-    //         const li = document.createElement('li');
-    //         const password = localStorage.getItem(u.id);
-    //         if (user.password == password) {
-    //             li.innerHTML = '/MyTask';
-    //             list.appendChild(li);
-    //         }
-    //     });
-    // }
-
-    // if (user.isAdmim == true) {
-    //     getUsers();
-    // }
 }
 
