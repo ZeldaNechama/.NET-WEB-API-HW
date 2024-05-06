@@ -34,7 +34,7 @@ public class UserService : IUserService
      public List<MyTask> GetTasks(int id) => users.Where(u => u.Id == id).SelectMany(u => u.TasksList).ToList();
 
      public User GetUser(User user ){
-        return users.Find(u=>u.Id == user.Id&&u.Password == user.Password);
+        return users.FirstOrDefault(u=>u.Name == user.Name&&u.Password == user.Password);
      }
 
 

@@ -30,6 +30,7 @@ public class LoginController : ControllerBase
         {
             var claims = new List<Claim>
                 {
+                    new Claim("type","User"),
                     new Claim("type","Admin"),
                     new Claim("name",current_user.Name!),
                     new Claim("id",current_user.Id.ToString())
@@ -67,8 +68,16 @@ public class LoginController : ControllerBase
     //     }
     //     else
     //     {
-    //         return Unauthorized();
+    //        var claims = new List<Claim>
+    //     {
+    //         new Claim("type", "User"),
+    //         new Claim("name", user.Name!),
+    //         new Claim("id", user.Id.ToString())
+    //     };
+    //         var token = LoginServices.GetToken(claims);
+    //         return new OkObjectResult(LoginServices.WriteToken(token));
     //     }
+          
     // }
 
 

@@ -10,7 +10,7 @@
     <h1>USERS CRUD</h1>
     <h3>Add</h3>
     <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
-        <input type="text" id="add-name" placeholder="New Task">
+        <input type="text" id="add-name" placeholder="New User">
         <input type="submit" value="Add">
     </form>
 
@@ -41,15 +41,13 @@
     </table>
 
  
-        <form action="javascript:void(0);" method="GET" onsubmit="getTasks()">
-            <input type="submit" value="My Tasks">
+        <form action="javascript:void(0);" method="GET" onsubmit="getUsers()">
+            <input type="submit" value="My Users">
         </form>
         <div id="tasks-list"></div>
     
     <script src="js/users.js" asp-append-version="true"></script>
-    <script type="text/javascript">
-        getUsers();
-    </script>
+
 </body>
 
 </html>

@@ -10,10 +10,5 @@ public static partial class Utilities
         services.AddSingleton<Interfaces.IMyTasksServices, Services.MyTaskServicesToFile>();
     }
    
-
-     public static IApplicationBuilder UseMyLogMiddleware(this IApplicationBuilder builder)
-    {
-        return builder.UseMiddleware<WriteToLOgMiddlleware>();
-    }
 }
 

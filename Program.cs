@@ -25,7 +25,7 @@ builder.Services
 builder.Services.AddAuthorization(cfg =>
    {
        cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin"));
-       cfg.AddPolicy("User", policy => policy.RequireClaim("User", "Admin", "User"));
+       cfg.AddPolicy("User", policy => policy.RequireClaim("type",  "User"));
    });
 
 // Add services to the container.
@@ -69,7 +69,7 @@ builder.Services.AddUser();
 
 var app = builder.Build();
 
-//app.UseMyLogMiddleware("log.log");
+app.LogMiddleware("log.log");
 
 //Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -93,6 +93,7 @@ app.UseDefaultFiles();
 // });
 app.UseStaticFiles();
 // js
+ app.UseAuthentication();
 
 app.UseAuthorization();
 

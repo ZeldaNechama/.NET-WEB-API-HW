@@ -1,36 +1,45 @@
-const uri = '/Users';
+const uri = '/User';
 let users = [];
 
 //const uri_user = '/User';
 const authToken = localStorage.getItem('authToken');
 
-
+getUsers();
     function getUsers() {
-        fetch(uri)
+        console.log(authToken);
+         var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer " + authToken);
+        myHeaders.append("Content-Type", "application/json");
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+        fetch(uri,requestOptions)
             .then(response => response.json())
             .then(data => _displayUsers(data))
             .catch(error => console.error('Unable to get items.', error));
     }
 
 
-    fetch(`${uri}/${userId}`, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userId)
-    })
-        .then(() => display_Users())
-        .catch(error => console.error('Unable to get tasks list.', error));
+    // fetch(`${uri}/${userId}`, {
+    //     method: 'GET',
+    //     headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(userId)
+    // })
+    //     .then(() => display_Users())
+    //     .catch(error => console.error('Unable to get tasks list.', error));
 
   
-        function display_Users(){
-            const list=document.getElementById('tasks-list');
-            const li=document.createElement('li');
-            li.innerHTML=uri+"/"+userId;
-            list.appendChild(li);
-        }
+        // function display_Users(){
+        //     const list=document.getElementById('tasks-list');
+        //     const li=document.createElement('li');
+        //     li.innerHTML=uri+"/"+userId;
+        //     list.appendChild(li);
+        // }
 
 
     function addUser() {
@@ -41,7 +50,8 @@ const authToken = localStorage.getItem('authToken');
             isAdmin: false,
             name: addNameTextbox.value.trim(),
             password:addPasswordTextBox.value.trim(),
-            tasksList:null
+            tasksList:null,
+            id:0
         };
 
         fetch(uri, {

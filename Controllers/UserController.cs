@@ -24,7 +24,7 @@ public class UserController : ControllerBase
     }
 
     [Authorize(Policy = "User")]
-    [HttpGet]
+    [HttpGet("Get List Tasks")]
     public ActionResult<List<MyTask>> GetTasks(int id)
     {
         return userService.GetTasks(id);

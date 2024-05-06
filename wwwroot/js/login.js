@@ -78,7 +78,9 @@ function findUser() {
     const password = document.getElementById('password').value.trim();
     const name = document.getElementById('name').value.trim();
     const user = { name: name, password: password, isAdmin: false, id: 0 };
+    console.log('in find user',user);
 
+    alert('ff')
     fetch(uri, {
         method: 'POST',
         headers: {
@@ -88,13 +90,16 @@ function findUser() {
         body: JSON.stringify(user)
     })
     .then(response => {
+        console.log('in 2nd find user');
         if (!response.ok) {
             throw new Error('Authentication failed');
         }
         return response.json();
     })
     .then(data => {
-        localStorage.setItem('authToken', data.token);
+        console.log('data of all',data);
+        alert('f')
+        localStorage.setItem('authToken', data);
         redirectToTaskCRUDPage();
     })
     .catch(error => {
@@ -104,6 +109,7 @@ function findUser() {
 }
 
 function redirectToTaskCRUDPage() {
+    console.log('in  func to nav task-crud ');
     const authToken = localStorage.getItem('authToken');
     if (authToken) {
         window.location.href = '/index.html';
