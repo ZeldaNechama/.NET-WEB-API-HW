@@ -25,7 +25,7 @@ builder.Services
 builder.Services.AddAuthorization(cfg =>
    {
        cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin"));
-       cfg.AddPolicy("User", policy => policy.RequireClaim("User", "Admin","User"));
+       cfg.AddPolicy("User", policy => policy.RequireClaim("User", "Admin", "User"));
    });
 
 // Add services to the container.
@@ -54,8 +54,7 @@ builder.Services.AddSwaggerGen(c =>
           });
       });
 
-
-// builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen();
 builder.Logging.ClearProviders();
 //builder.Logging.Add("log.log");
 
@@ -71,19 +70,19 @@ var app = builder.Build();
 
 //app.UseMyLogMiddleware();
 // app.useWriteToLOgMiddlleware();
- app.UseMiddleware<WriteToLOgMiddlleware>();//logs/requestlog.log
+app.UseMiddleware<WriteToLOgMiddlleware>();//logs/requestlog.log
 
 
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 //{
-    app.UseSwagger();
-    // app.UseSwaggerUI();
-//}
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "TASKS API V1");
-});
+app.UseSwagger();
+app.UseSwaggerUI();
+// }
+// app.UseSwaggerUI(c =>
+// {
+//     c.SwaggerEndpoint("/swagger/v1/swagger.json", "TASKS API V1");
+// });
 
 app.UseHttpsRedirection();
 

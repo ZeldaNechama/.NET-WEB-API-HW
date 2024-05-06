@@ -19,6 +19,7 @@ public class LoginController : ControllerBase
         this.userService = userService;
     }
 
+    //option1
     [HttpPost]
     public ActionResult Login([FromBody] User user)
     {
@@ -49,25 +50,42 @@ public class LoginController : ControllerBase
         }
     }
 
-
-    //     [HttpGet]
-    //     [Route("[action]")]
-    //     [Authorize(Policy = "ClearanceLevel1")]
-    //     //Admin& User  can get taskslist
-    //     public ActionResult<String> AccessPublicFiles()
+    // [HttpPost]
+    // public ActionResult Login([FromBody] User user)
+    // {
+    //     // Implement proper authentication logic
+    //     if (user.Name == "zn" && user.Password == "zndbvkwk@#vhvbj")
     //     {
-    //         return new OkObjectResult("Public Files Accessed");
-    //     }
-
-    // //only Admin can acccess this;
-    //     [HttpGet]
-    //     [Route("[action]")]
-    //     [Authorize(Policy = "ClearanceLevel2")]
-    //     public ActionResult<String> AccessClassifiedFiles()
+    //         var claims = new List<Claim>
     //     {
-    //         return new OkObjectResult("Classified Files Accessed");
+    //         new Claim("type", "Admin"),
+    //         new Claim("name", user.Name),
+    //         new Claim("id", user.Id.ToString())
+    //     };
+    //         var token = LoginServices.GetToken(claims);
+    //         return new OkObjectResult(LoginServices.WriteToken(token));
     //     }
-    //     //login for both with changes for each one;
+    //     else
+    //     {
+    //         return Unauthorized();
+    //     }
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     //     [HttpPost]
     //     [Route("[action]")]
     //     public ActionResult<String> Login([FromBody] User User)
