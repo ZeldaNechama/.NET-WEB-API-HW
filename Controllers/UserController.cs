@@ -13,38 +13,41 @@ public class UserController : ControllerBase
 
     public UserController(IUserService userService)
     {
-        this.userService=userService;
+        this.userService = userService;
     }
-    
-    [Authorize(Policy = "Admin")] 
+
+    [Authorize(Policy = "Admin")]
     [HttpGet]
     public ActionResult<List<User>> Get()
     {
         return userService.GetAll();
     }
-    
+
+    [Authorize(Policy = "User")]
     [HttpGet]
     public ActionResult<List<MyTask>> GetTasks(int id)
     {
         return userService.GetTasks(id);
     }
 
+    [Authorize(Policy = "User")]
     [HttpGet("{id}")]
     public ActionResult<User> Get(int id)
     {
         var user = userService.Get(id);
         if (user == null)
             return NotFound();
-        return Ok(user);       
+        return Ok(user);
     }
-    [Authorize(Policy = "Admin")]    
+    [Authorize(Policy = "Admin")]
     [HttpPost]
     public IActionResult Post(User newUser)
     {
-        var newId = userService.Post(newUser);      
-        return CreatedAtAction(nameof(Post), new {id=newId}, newUser);
+        var newId = userService.Post(newUser);
+        return CreatedAtAction(nameof(Post), new { id = newId }, newUser);
     }
-        
+    
+    [Authorize(Policy = "User")]
     [HttpPut("{id}")]
     public ActionResult Put(int id, User newUser)
     {
@@ -52,19 +55,19 @@ public class UserController : ControllerBase
         return Ok();
     }
 
-    [Authorize(Policy = "Admin")]    
+    [Authorize(Policy = "Admin")]
     [HttpDelete("{id}")]
     public ActionResult Delete(int id)
     {
         userService.Delete(id);
         return Ok();
     }
-   
+
 }
 public static partial class Utilities
 {
-   public static void AddUser(this IServiceCollection services)
-   {
+    public static void AddUser(this IServiceCollection services)
+    {
         services.AddSingleton<Interfaces.IUserService, Services.UserService>();
- }
+    }
 }

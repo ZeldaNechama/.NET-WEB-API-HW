@@ -27,5 +27,11 @@ public class WriteToLOgMiddlleware
     }
 
 
-
+}
+public static partial class Utilities
+{
+    public static IApplicationBuilder LogMiddleware(this IApplicationBuilder applicationBuilder,string path)
+    {
+        return applicationBuilder.UseMiddleware<WriteToLOgMiddlleware>(path);
+    }
 }

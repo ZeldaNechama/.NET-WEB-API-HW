@@ -10,7 +10,7 @@ namespace tasks.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-[Authorize(Policy = "User")]
+//[Authorize(Policy = "User")]
 public class LoginController : ControllerBase
 {
     IUserService userService;
@@ -23,7 +23,7 @@ public class LoginController : ControllerBase
     [HttpPost]
     public ActionResult Login([FromBody] User user)
     {
-        User current_user = userService.Get(user.Id);
+        User current_user = userService.GetUser(user);
         if (current_user == null)
             return BadRequest();
         if (current_user.IsAdmin)

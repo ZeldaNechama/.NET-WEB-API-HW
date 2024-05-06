@@ -66,24 +66,22 @@ builder.Services.AddUser();
 
 
 
+
 var app = builder.Build();
 
-//app.UseMyLogMiddleware();
-// app.useWriteToLOgMiddlleware();
-app.UseMiddleware<WriteToLOgMiddlleware>();//logs/requestlog.log
+//app.UseMyLogMiddleware("log.log");
 
-
-// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
+//Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
 app.UseSwagger();
-app.UseSwaggerUI();
-// }
-// app.UseSwaggerUI(c =>
-// {
-//     c.SwaggerEndpoint("/swagger/v1/swagger.json", "TASKS API V1");
-// });
+//app.UseSwaggerUI();
 
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "TASKS API V1");
+});
+}
 app.UseHttpsRedirection();
 
 
