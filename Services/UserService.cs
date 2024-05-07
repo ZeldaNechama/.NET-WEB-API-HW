@@ -31,7 +31,7 @@ public class UserService : IUserService
 
     public User Get(int id) => users.FirstOrDefault(u => u.Id == id);
 
-     public List<MyTask> GetTasks(int id) => users.Where(u => u.Id == id).SelectMany(u => u.TasksList).ToList();
+    // public List<MyTask> GetTasks(int id) => users.Where(u => u.Id == id).SelectMany(u => u.TasksList).ToList();
 
      public User GetUser(User user ){
         return users.FirstOrDefault(u=>u.Name == user.Name&&u.Password == user.Password);

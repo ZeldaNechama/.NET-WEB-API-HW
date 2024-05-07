@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ogZO+45qTfr6g5a9DWy704eNXNyGlc7IuFeXuLO/2dNwpNNp+RxtQd9LznDEngexdQnreemgBn+C0mT02/tTnA==",
+  "dgSpecHash": "ULVGACow05Wa1UftSH51Rffhht8BQ36+O9C0Uxn750sonFo1xj2/+czV9FlPnypY6u+FC/s9wHuvqnbwjV/syg==",
   "success": true,
-  "projectFilePath": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\lesson3_\\Tasks\\.NET-WEB-API-HW\\lesson2.csproj",
+  "projectFilePath": "E:\\שב תכנות\\שנה ב\\core .Net\\שיעורי בית\\project\\.NET-WEB-API-HW\\lesson2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.4\\microsoft.aspnetcore.authentication.jwtbearer.5.0.4.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

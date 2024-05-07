@@ -10,6 +10,7 @@ public class MyTaskServicesToFile : IMyTasksServices
 
     private List<MyTask> mytasks { get; }
     private string filePath;
+
     public MyTaskServicesToFile(IWebHostEnvironment webHost)
     {
         this.filePath = Path.Combine(/*webHost.ContentRootPath,*/ "Data", "tasks.json");
@@ -31,6 +32,15 @@ public class MyTaskServicesToFile : IMyTasksServices
     }
     public List<MyTask> GetAll() => mytasks;
 
+
+    public List<MyTask> GetMyTasks(int id)
+    {
+        return mytasks.FindAll(t => t.User_Id == id);
+    }
+    // public MyTask Get(int id)
+    // {
+    //     return mytasks.FirstOrDefault(t => t.User_Id == id);
+    // }
     public MyTask Get(int id) => mytasks.FirstOrDefault(t => t.Id == id);
 
     public int Post(MyTask myTask)

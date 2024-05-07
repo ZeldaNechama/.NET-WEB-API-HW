@@ -29,6 +29,7 @@ builder.Services.AddAuthorization(cfg =>
    });
 
 // Add services to the container.
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllers();
 
@@ -85,13 +86,8 @@ app.UseSwaggerUI(c =>
 }
 app.UseHttpsRedirection();
 
-
 // js
 app.UseDefaultFiles();
-// app.UseDefaultFiles(new DefaultFilesOptions
-// {
-//     DefaultFileNames = new List<string> { "login.html" } // Specify the desired default file here
-// });
 app.UseStaticFiles();
 // js
  app.UseAuthentication();

@@ -50,36 +50,7 @@ public class LoginController : ControllerBase
         }
     }
 
-    // [HttpPost]
-    // public ActionResult Login([FromBody] User user)
-    // {
-    //     // Implement proper authentication logic
-    //     if (user.Name == "zn" && user.Password == "zndbvkwk@#vhvbj")
-    //     {
-    //         var claims = new List<Claim>
-    //     {
-    //         new Claim("type", "Admin"),
-    //         new Claim("name", user.Name),
-    //         new Claim("id", user.Id.ToString())
-    //     };
-    //         var token = LoginServices.GetToken(claims);
-    //         return new OkObjectResult(LoginServices.WriteToken(token));
-    //     }
-    //     else
-    //     {
-    //        var claims = new List<Claim>
-    //     {
-    //         new Claim("type", "User"),
-    //         new Claim("name", user.Name!),
-    //         new Claim("id", user.Id.ToString())
-    //     };
-    //         var token = LoginServices.GetToken(claims);
-    //         return new OkObjectResult(LoginServices.WriteToken(token));
-    //     }
-          
-    // }
-
-
+    
 
 
 

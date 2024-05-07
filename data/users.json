@@ -1,56 +1,38 @@
 [
     {
         "Id": 1,
-        "Name": "aaa",
-        "Password": "",
-        "IsAdmin": false,
-        "TasksList": null
+        "Name": "ploni Almoni",
+        "Password": "p123a",
+        "IsAdmin": false
     },
     {
         "Id": 2,
-        "Name": "string",
-        "Password": "string",
-        "IsAdmin": false,
-        "TasksList": null
+        "Name": "sarit",
+        "Password": "s10456",
+        "IsAdmin": false
     },
     {
         "Id": 3,
         "Name": "Chaim Choen",
         "Password": "c12h@nfdmf",
-        "IsAdmin": false,
-        "TasksList": null
+        "IsAdmin": false
     },
     {
         "Id": 4,
         "Name": "Leah",
         "Password": "jdfsdks@!hjjfw",
-        "IsAdmin": false,
-        "TasksList": null
+        "IsAdmin": false
     },
     {
         "Id": 5,
         "Name": "zn",
         "Password": "zndbvkwk@#vhvbj",
-        "IsAdmin": true,
-        "TasksList": [
-            {
-                "Id": 1,
-                "Name": "finish project",
-                "IsDone": false
-            }
-        ]
+        "IsAdmin": true
     },
     {
         "Id": 6,
         "Name": "chaim choen",
         "Password": "1223448hghg",
-        "IsAdmin": false,
-        "TasksList": [
-            {
-                "Id": 0,
-                "Name": "Fix the phone",
-                "IsDone": false
-            }
-        ]
+        "IsAdmin": false
     }
 ]

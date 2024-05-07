@@ -7,23 +7,35 @@ namespace tasks.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-//[Authorize]//(Policy = "User")
 
 public class MyTaskController : ControllerBase
 {
     private IMyTasksServices myTaskService;
+    private int User_Id;
 
-    public MyTaskController(IMyTasksServices myTaskService)
+
+    public MyTaskController(IMyTasksServices myTaskService, IHttpContextAccessor httpContextAccessor)
     {
         this.myTaskService = myTaskService;
+        User_Id = int.Parse(httpContextAccessor.HttpContext?.User?.FindFirst("id")?.Value);
+
     }
 
+   
     [Authorize(Policy = "User")]
-    [HttpGet]
+    [HttpGet("All")] 
     public ActionResult<List<MyTask>> Get()
     {
         return myTaskService.GetAll();
     }
+
+    [Authorize(Policy = "User")]
+    [HttpGet] 
+    public ActionResult<List<MyTask>> GetMyTasks()
+    {
+        return myTaskService.GetMyTasks(User_Id);
+    }
+
 
     [Authorize(Policy = "User")]
     [HttpGet("{id}")]
@@ -39,11 +51,11 @@ public class MyTaskController : ControllerBase
     [HttpPost]
     public IActionResult Post(MyTask newMyTask)
     {
-       
+
         var newId = myTaskService.Post(newMyTask);
         return CreatedAtAction(nameof(Post), new { id = newId }, newMyTask);
     }
-    
+
     [Authorize(Policy = "User")]
     [HttpPut("{id}")]
     public ActionResult Put(int id, MyTask newMyTask)
