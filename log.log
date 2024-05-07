@@ -238,3 +238,345 @@
 /MyTask.GET took 78ms. User: Leah
 /MyTask.POST took 108ms. User: Leah
 /MyTask.GET took 1ms. User: Leah
+/index.html.GET took 49ms. User: unknown
+/css/site.css.GET took 4ms. User: unknown
+/js/site.js.GET took 7ms. User: unknown
+/login.html.GET took 2ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 2ms. User: unknown
+/Login.POST took 125ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 4ms. User: unknown
+/js/site.js.GET took 4ms. User: unknown
+/MyTask.GET took 87ms. User: Leah
+/MyTask/4.PUT took 5ms. User: unknown
+/MyTask.GET took 2ms. User: Leah
+/MyTask/4.DELETE took 0ms. User: unknown
+/MyTask.GET took 0ms. User: Leah
+/MyTask/14.PUT took 0ms. User: unknown
+/MyTask.GET took 0ms. User: Leah
+/MyTask.POST took 0ms. User: unknown
+/MyTask/4.PUT took 0ms. User: unknown
+/MyTask.GET took 1ms. User: Leah
+/users.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/users.js.GET took 1ms. User: unknown
+/User.GET took 6ms. User: Leah
+/User/5.DELETE took 0ms. User: unknown
+/User.GET took 0ms. User: Leah
+/User/5.DELETE took 0ms. User: unknown
+/User.GET took 0ms. User: Leah
+/users.html.GET took 2ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/users.js.GET took 97ms. User: unknown
+/User.GET took 5ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 9ms. User: unknown
+/login.html.GET took 2ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/login.js.GET took 31ms. User: unknown
+/Login.POST took 10ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 4ms. User: unknown
+/js/site.js.GET took 7ms. User: unknown
+/MyTask.GET took 18ms. User: zn
+/MyTask.POST took 0ms. User: unknown
+/users.html.GET took 1ms. User: unknown
+/css/site.css.GET took 6ms. User: unknown
+/js/users.js.GET took 4ms. User: unknown
+/User.GET took 0ms. User: zn
+/User.GET took 0ms. User: zn
+/Swagger.GET took 3ms. User: unknown
+/Swagger/index.html.GET took 68ms. User: unknown
+/Swagger/swagger-ui.css.GET took 23ms. User: unknown
+/Swagger/swagger-ui-standalone-preset.js.GET took 27ms. User: unknown
+/Swagger/swagger-ui-bundle.js.GET took 37ms. User: unknown
+/swagger/v1/swagger.json.GET took 90ms. User: unknown
+/Login.POST took 1ms. User: unknown
+/MyTask/All.GET took 2ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.POST took 70ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.POST took 155ms. User: chaim choen
+/MyTask/16.GET took 16ms. User: chaim choen
+/User.GET took 1ms. User: chaim choen
+/index.html.GET took 3ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 12ms. User: unknown
+/login.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 7ms. User: unknown
+/login.html.GET took 4ms. User: unknown
+/Login.POST took 1ms. User: unknown
+/index.html.GET took 0ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 1ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/css/site.css.GET took 39ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask/16.PUT took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 11ms. User: unknown
+/js/site.js.GET took 11ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask/16.PUT took 38ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.POST took 31ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.POST took 33ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/users.html.GET took 0ms. User: unknown
+/css/site.css.GET took 9ms. User: unknown
+/js/users.js.GET took 8ms. User: unknown
+/User.GET took 1ms. User: chaim choen
+/index.html.GET took 2ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/css/site.css.GET took 8ms. User: unknown
+/MyTask.GET took 1ms. User: chaim choen
+/index.html.GET took 0ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 0ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/login.html.GET took 2ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/login.js.GET took 3ms. User: unknown
+/Login.POST took 0ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.POST took 38ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/css/site.css.GET took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 1ms. User: chaim choen
+/index.html.GET took 0ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 1ms. User: chaim choen
+/index.html.GET took 0ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.POST took 35ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 0ms. User: unknown
+/js/site.js.GET took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 0ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 0ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/User.GET took 0ms. User: chaim choen
+/index.html.GET took 3ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 3ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 1ms. User: chaim choen
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 0ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/User.GET took 0ms. User: chaim choen
+/index.html.GET took 49ms. User: unknown
+/css/site.css.GET took 9ms. User: unknown
+/js/site.js.GET took 9ms. User: unknown
+/MyTask.GET took 316ms. User: chaim choen
+/MyTask.GET took 316ms. User: chaim choen
+/User.GET took 11ms. User: chaim choen
+/index.html.GET took 3ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/MyTask.GET took 1ms. User: chaim choen
+/index.html.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/MyTask.GET took 1ms. User: chaim choen
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/MyTask.GET took 2ms. User: chaim choen
+/MyTask.POST took 134ms. User: chaim choen
+/MyTask.GET took 0ms. User: chaim choen
+/index.html.GET took 48ms. User: unknown
+/js/site.js.GET took 4ms. User: unknown
+/css/site.css.GET took 14ms. User: unknown
+/MyTask.GET took 197ms. User: chaim choen
+/MyTask.GET took 201ms. User: chaim choen
+/index.html.GET took 52ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 8ms. User: unknown
+/MyTask.GET took 229ms. User: chaim choen
+/MyTask.GET took 229ms. User: chaim choen
+/index.html.GET took 12ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 6ms. User: unknown
+/MyTask.GET took 4ms. User: chaim choen
+/MyTask.GET took 4ms. User: chaim choen
+/index.html.GET took 2ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/css/site.css.GET took 3ms. User: unknown
+/login.html.GET took 6ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 4ms. User: unknown
+/Login.POST took 55ms. User: unknown
+/index.html.GET took 0ms. User: unknown
+/css/site.css.GET took 3ms. User: unknown
+/js/site.js.GET took 10ms. User: unknown
+/MyTask.GET took 3ms. User: Leah
+/MyTask.GET took 3ms. User: Leah
+/MyTask/4.PUT took 34ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 7ms. User: unknown
+/MyTask.GET took 0ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 2ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/MyTask.GET took 0ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/User.GET took 3ms. User: Leah
+/MyTask.POST took 70ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 3ms. User: unknown
+/css/site.css.GET took 5ms. User: unknown
+/js/site.js.GET took 4ms. User: unknown
+/MyTask.GET took 0ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 6ms. User: unknown
+/MyTask.GET took 0ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 0ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 0ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 1ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/MyTask/14.PUT took 32ms. User: Leah
+/MyTask/14.PUT took 32ms. User: Leah
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 3ms. User: unknown
+/MyTask.GET took 0ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 43ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 11ms. User: unknown
+/MyTask.GET took 238ms. User: Leah
+/MyTask.GET took 237ms. User: Leah
+/index.html.GET took 0ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/MyTask.GET took 2ms. User: Leah
+/MyTask.GET took 5ms. User: Leah
+/MyTask.POST took 111ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/login.html.GET took 2ms. User: unknown
+/js/login.js.GET took 2ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/Login.POST took 14ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 8ms. User: unknown
+/MyTask.GET took 2ms. User: Leah
+/MyTask.GET took 2ms. User: Leah
+/index.html.GET took 0ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/MyTask.GET took 1ms. User: Leah
+/MyTask.GET took 1ms. User: Leah
+/index.html.GET took 1ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/MyTask.GET took 1ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 6ms. User: unknown
+/MyTask.GET took 1ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 50ms. User: unknown
+/css/site.css.GET took 3ms. User: unknown
+/js/site.js.GET took 24ms. User: unknown
+/login.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 2ms. User: unknown
+/Login.POST took 198ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 11ms. User: unknown
+/MyTask.GET took 92ms. User: Leah
+/MyTask.GET took 92ms. User: Leah
+/MyTask/26.PUT took 48ms. User: Leah
+/MyTask.GET took 1ms. User: Leah
+/User.GET took 3ms. User: Leah
+/MyTask.POST took 75ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 49ms. User: unknown
+/css/site.css.GET took 6ms. User: unknown
+/js/site.js.GET took 13ms. User: unknown
+/MyTask.GET took 191ms. User: Leah
+/index.html.GET took 2ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 8ms. User: unknown
+/MyTask.GET took 7ms. User: Leah
+/MyTask.GET took 5ms. User: Leah
+/User.GET took 12ms. User: Leah
+/User.GET took 1ms. User: Leah
+/User.GET took 1ms. User: Leah
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 3ms. User: unknown
+/js/site.js.GET took 7ms. User: unknown
+/MyTask.GET took 1ms. User: Leah
+/MyTask.GET took 1ms. User: Leah
+/MyTask/16.PUT took 69ms. User: Leah
+/MyTask.GET took 0ms. User: Leah
+/index.html.GET took 80ms. User: unknown
+/css/site.css.GET took 4ms. User: unknown
+/js/site.js.GET took 15ms. User: unknown
+/login.html.GET took 8ms. User: unknown
+/js/login.js.GET took 3ms. User: unknown
+/css/site.css.GET took 7ms. User: unknown
+/Login.POST took 228ms. User: unknown
+/index.html.GET took 0ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 3ms. User: unknown
+/MyTask.GET took 90ms. User: ploni Almoni
+/MyTask.GET took 97ms. User: ploni Almoni
+/MyTask/27.PUT took 80ms. User: ploni Almoni
+/MyTask.GET took 0ms. User: ploni Almoni

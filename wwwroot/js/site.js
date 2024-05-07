@@ -1,50 +1,50 @@
-// const uri = '/MyTask';
-// let tasks = [];
+// // const uri = '/MyTask';
+// // let tasks = [];
 
-// const uri_user = '/User';
-// const authToken = localStorage.getItem('authToken');
+// // const uri_user = '/User';
+// // const authToken = localStorage.getItem('authToken');
 
-// if (!authToken) {
-//     window.location.href = '/login.html';
-// }
-// else {
-//     function getItems() {
-//         var myHeaders = new Headers();
-//         myHeaders.append("Authorization", "Bearer " + authToken);
-//         myHeaders.append("Content-Type", "application/json");
-//         var requestOptions = {
-//             method: 'GET',
-//             headers: myHeaders,
-//             redirect: 'follow'
-//         };
-//         fetch(uri, requestOptions)
-//             .then(response => response.json())
-//             .then(data => _displayItems(data))
-//             .catch(error => console.error('Unable to get items.', error));
-//     }
+// // if (!authToken) {
+// //     window.location.href = '/login.html';
+// // }
+// // else {
+// //     function getItems() {
+// //         var myHeaders = new Headers();
+// //         myHeaders.append("Authorization", "Bearer " + authToken);
+// //         myHeaders.append("Content-Type", "application/json");
+// //         var requestOptions = {
+// //             method: 'GET',
+// //             headers: myHeaders,
+// //             redirect: 'follow'
+// //         };
+// //         fetch(uri, requestOptions)
+// //             .then(response => response.json())
+// //             .then(data => _displayItems(data))
+// //             .catch(error => console.error('Unable to get items.', error));
+// //     }
     
-//     function addItem() {
-//         const addNameTextbox = document.getElementById('add-name');
+// //     function addItem() {
+// //         const addNameTextbox = document.getElementById('add-name');
 
-//         const item = {
-//             isDone: false,
-//             name: addNameTextbox.value.trim()
-//         };
+// //         const item = {
+// //             isDone: false,
+// //             name: addNameTextbox.value.trim()
+// //         };
 
-//         fetch(uri, {
-//             method: 'POST',
-//             headers: {
-//                 'Accept': 'application/json',
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(item)
-//         })
-//             .then(response =>
-//                 response.json())
-//             .then(() => {
-//                 getItems();
-//                 addNameTextbox.value = '';
-//             })
+// //         fetch(uri, {
+// //             method: 'POST',
+// //             headers: {
+// //                 'Accept': 'application/json',
+// //                 'Content-Type': 'application/json'
+// //             },
+// //             body: JSON.stringify(item)
+// //         })
+// //             .then(response =>
+// //                 response.json())
+// //             .then(() => {
+// //                 getItems();
+// //                 addNameTextbox.value = '';
+// //             })
 //             .catch(error => console.error('Unable to add item.', error));
 //     }
 
@@ -167,18 +167,22 @@ else {
     }
     
     function addItem() {
+        
         const addNameTextbox = document.getElementById('add-name');
 
         const item = {
             isDone: false,
             name: addNameTextbox.value.trim()
+            //,
+          //  user_id:user.user_id
         };
 
         fetch(uri, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`
             },
             body: JSON.stringify(item)
         })
@@ -193,7 +197,12 @@ else {
 
     function deleteItem(id) {
         fetch(`${uri}/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`
+            },
         })
             .then(() => getItems())
             .catch(error => console.error('Unable to delete item.', error));
@@ -214,20 +223,23 @@ else {
             id: parseInt(itemId, 10),
             isDone: document.getElementById('edit-isDone').checked,
             name: document.getElementById('edit-name').value.trim()
+            //,
+           // user_id:getUser().user_id
         };
 
         fetch(`${uri}/${itemId}`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`
             },
             body: JSON.stringify(item)
         })
             .then(() => getItems())
             .catch(error => console.error('Unable to update item.', error));
 
-        closeInput();
+         closeInput();
 
         return false;
     }
@@ -282,5 +294,35 @@ else {
 
         tasks = data;
     }
+
+    // function getUser(){
+    //     console.log('in get user');
+    //     fetch(uri_user, {
+    //         method: 'GET',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': 'application/json',
+    //             'Authorization': `Bearer ${authToken}`
+    //         },
+    
+    //     })
+    //         .then(response => {
+    //             if (response.status != 200) {
+    //                 throw new Error('Failed to fetch data');
+    //             }
+    //             return response.json();
+    //         })
+    //         .then(data =>{
+    //             console.log(data);
+    //             document.getElementById('edit-name').value =data.name;
+    //             document.getElementById('edit-isDone').value=data.isDone;
+    //         })
+    //         .catch(error => {
+    //             console.error('Unable to get my user.', error);
+    //         });
+    // }
+
+    getItems();
 }
+
 

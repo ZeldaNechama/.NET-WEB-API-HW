@@ -24,13 +24,6 @@ public class UserController : ControllerBase
         return userService.GetAll();
     }
 
-    // [Authorize(Policy = "User")]
-    // [HttpGet("Get List Tasks")]
-    // public ActionResult<List<MyTask>> GetTasks(int id)
-    // {
-    //     return userService.GetTasks(id);
-    // }
-
     [Authorize(Policy = "User")]
     [HttpGet("{id}")]
     public ActionResult<User> Get(int id)
