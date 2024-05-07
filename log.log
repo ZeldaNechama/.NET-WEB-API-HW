@@ -580,3 +580,38 @@
 /MyTask.GET took 97ms. User: ploni Almoni
 /MyTask/27.PUT took 80ms. User: ploni Almoni
 /MyTask.GET took 0ms. User: ploni Almoni
+/index.html.GET took 73ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/favicon.ico.GET took 68ms. User: unknown
+/MyTask.GET took 371ms. User: ploni Almoni
+/MyTask.GET took 5ms. User: ploni Almoni
+/index.html.GET took 11ms. User: unknown
+/css/site.css.GET took 6ms. User: unknown
+/js/site.js.GET took 17ms. User: unknown
+/login.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 7ms. User: unknown
+/login.html.GET took 0ms. User: unknown
+/js/login.js.GET took 1ms. User: unknown
+/css/site.css.GET took 9ms. User: unknown
+/login.html.GET took 0ms. User: unknown
+/js/login.js.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/login.html.GET took 1ms. User: unknown
+/js/login.js.GET took 1ms. User: unknown
+/css/site.css.GET took 7ms. User: unknown
+/login.html.GET took 2ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 6ms. User: unknown
+/login.html.GET took 0ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 2ms. User: unknown
+/login.html.GET took 0ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 1ms. User: unknown
+/login.html.GET took 1ms. User: unknown
+/js/login.js.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/login.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/login.js.GET took 7ms. User: unknown

@@ -40,3 +40,4 @@ function redirectToTaskCRUDPage() {
         console.error('Authentication token not found.');
     }
 }
+
