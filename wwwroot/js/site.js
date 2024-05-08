@@ -169,10 +169,14 @@ else {
     function addItem() {
         
         const addNameTextbox = document.getElementById('add-name');
-
+        const addIDUserTextbox=document.getElementById('add-user_Id');
+        console.log(addIDUserTextbox.value);
+       //console.log( users.find(u=>u.user_Id==addIDUserTextbox));
         const item = {
             isDone: false,
-            name: addNameTextbox.value.trim()
+            name: addNameTextbox.value.trim(),
+            id:0,
+            user_Id:addIDUserTextbox.value.trim()
         };
 
         fetch(uri, {

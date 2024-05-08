@@ -34,5 +34,11 @@
         "Name": "chaim choen",
         "Password": "1223448hghg",
         "IsAdmin": false
+    },
+    {
+        "Id": 7,
+        "Name": "sarah levi",
+        "Password": "s0407#gfghg",
+        "IsAdmin": false
     }
 ]
