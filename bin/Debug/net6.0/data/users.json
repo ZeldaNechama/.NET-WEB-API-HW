@@ -1,6 +1,6 @@
 [
     {
-        "Id": 1,
+        "Id": 0,
         "Name": "ploni Almoni",
         "Password": "p123a",
         "IsAdmin": false
@@ -33,6 +33,12 @@
         "Id": 6,
         "Name": "chaim choen",
         "Password": "1223448hghg",
+        "IsAdmin": false
+    },
+    {
+        "Id": 7,
+        "Name": "sarah levi",
+        "Password": "s0407#gfghg",
         "IsAdmin": false
     }
 ]

@@ -50,62 +50,7 @@ public class LoginController : ControllerBase
         }
     }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    //     [HttpPost]
-    //     [Route("[action]")]
-    //     public ActionResult<String> Login([FromBody] User User)
-    //     {
-    //         //User?.FindFirst
-    //         var dt = DateTime.Now;
-    // // User.IsAdmin == false
-    //         if (User.Name!="zn"
-    //         || User.Password != $"W{dt.Year}#{dt.Day}!")
-    //         {
-    //             return Unauthorized();
-    //         }
-
-    //         var claims = new List<Claim>
-    //             {
-    //                 // new Claim("IsAdmin", "true"),
-    //                 new Claim("Name", "zn"),
-    //                 new Claim("Password","zndbvkwk@#vhvbj")
-    //             };
-
-    //         var token = LoginServices.GetToken(claims);
-
-    //         return new OkObjectResult(LoginServices.WriteToken(token));
-    //     }
-
-
-    //     [HttpPost]
-    //     [Route("[action]")]
-    //     [Authorize(Policy = "Admin")]
-    //     public IActionResult GenerateBadge([FromBody] User User)
-    //     {
-    //         var claims = new List<Claim>
-    //             {
-    //                 new Claim("type", "User"),
-    //                 new Claim("ClearanceLevel", User.IsAdmin.ToString()),
-    //             };
-
-    //         var token = LoginServices.GetToken(claims);
-
-    //         return new OkObjectResult(LoginServices.WriteToken(token));
-    //     }
+       
 }
 
 

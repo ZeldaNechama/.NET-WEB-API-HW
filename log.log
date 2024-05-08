@@ -754,3 +754,13 @@
 /MyTask.GET took 2ms. User: zn
 /MyTask.POST took 1ms. User: zn
 /MyTask.GET took 1ms. User: zn
+/index.html.GET took 111ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/MyTask.GET took 490ms. User: zn
+/MyTask.GET took 1ms. User: zn
+/index.html.GET took 7ms. User: unknown
+/css/site.css.GET took 4ms. User: unknown
+/js/site.js.GET took 46ms. User: unknown
+/login.html.GET took 5ms. User: unknown
+/css/site.css.GET took 3ms. User: unknown
+/js/login.js.GET took 5ms. User: unknown

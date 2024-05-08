@@ -41,3 +41,26 @@ function redirectToTaskCRUDPage() {
     }
 }
 
+function handleCredentialResponse(response) {
+    if (response.credential) {
+        var idToken = response.credential;
+        var decodedToken = parseJwt(idToken);
+        var userName = decodedToken.name;
+        var userPassword = decodedToken.sub;
+        login(userName, userPassword);
+    } else {
+        alert('Google Sign-In was cancelled.');
+    }
+}
+
+
+//Parses JWT token from Google Sign-In
+function parseJwt(authToken) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+}
