@@ -173,8 +173,6 @@ else {
         const item = {
             isDone: false,
             name: addNameTextbox.value.trim()
-            //,
-          //  user_id:user.user_id
         };
 
         fetch(uri, {
@@ -210,21 +208,22 @@ else {
 
     function displayEditForm(id) {
         const item = tasks.find(item => item.id === id);
-
         document.getElementById('edit-name').value = item.name;
         document.getElementById('edit-id').value = item.id;
+        document.getElementById('edit-user_Id').value=item.user_Id;
         document.getElementById('edit-isDone').checked = item.isDone;
         document.getElementById('editForm').style.display = 'block';
     }
 
     function updateItem() {
         const itemId = document.getElementById('edit-id').value;
+        const task=tasks.filter(t=>t.id==itemId);
+        console.log(task);
         const item = {
             id: parseInt(itemId, 10),
             isDone: document.getElementById('edit-isDone').checked,
-            name: document.getElementById('edit-name').value.trim()
-            //,
-           // user_id:getUser().user_id
+            name: document.getElementById('edit-name').value.trim(),
+            user_Id:task.user_Id
         };
 
         fetch(`${uri}/${itemId}`, {
@@ -323,6 +322,8 @@ else {
     // }
 
     getItems();
+
+    
 }
 
 

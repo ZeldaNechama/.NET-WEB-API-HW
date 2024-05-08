@@ -6,15 +6,15 @@ const authToken = localStorage.getItem('authToken');
 
 getUsers();
     function getUsers() {
-        var myHeaders = new Headers();
-        myHeaders.append("Authorization", "Bearer " + authToken);
-        myHeaders.append("Content-Type", "application/json");
-        var requestOptions = {
+    
+        fetch(uri, {
             method: 'GET',
-            headers: myHeaders,
-            redirect: 'follow'
-        };
-        fetch(uri,requestOptions)
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`
+            },
+        })
             .then(response => response.json())
             .then(data => _displayUsers(data))
             .catch(error => console.error('Unable to get items.', error));
@@ -37,7 +37,8 @@ getUsers();
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`
             },
             body: JSON.stringify(user)
         })
@@ -52,7 +53,12 @@ getUsers();
 
     function deleteUser(id) {
         fetch(`${uri}/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers:{
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`
+            }
         })
             .then(() => getUsers())
             .catch(error => console.error('Unable to delete item.', error));
@@ -80,7 +86,9 @@ getUsers();
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`
+
             },
             body: JSON.stringify(user)
         })
@@ -135,7 +143,7 @@ getUsers();
 
             let td3 = tr.insertCell(2);
             let textNode2 = document.createTextNode(user.password);
-            td2.appendChild(textNode2);
+            td3.appendChild(textNode2);
 
             let td4 = tr.insertCell(3);
             td4.appendChild(editButton);

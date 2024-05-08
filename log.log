@@ -615,3 +615,109 @@
 /login.html.GET took 1ms. User: unknown
 /css/site.css.GET took 2ms. User: unknown
 /js/login.js.GET took 7ms. User: unknown
+/index.html.GET took 96ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/site.js.GET took 16ms. User: unknown
+/login.html.GET took 2ms. User: unknown
+/js/login.js.GET took 3ms. User: unknown
+/favicon.ico.GET took 194ms. User: unknown
+/Login.POST took 52ms. User: unknown
+/login.html.GET took 5ms. User: unknown
+/css/site.css.GET took 8ms. User: unknown
+/js/login.js.GET took 15ms. User: unknown
+/Login.POST took 360ms. User: unknown
+/index.html.GET took 3ms. User: unknown
+/css/site.css.GET took 8ms. User: unknown
+/js/site.js.GET took 18ms. User: unknown
+/MyTask.GET took 196ms. User: ploni Almoni
+/MyTask.GET took 206ms. User: ploni Almoni
+/MyTask/24.PUT took 68ms. User: ploni Almoni
+/MyTask.GET took 0ms. User: ploni Almoni
+/MyTask/22.DELETE took 63ms. User: ploni Almoni
+/MyTask.GET took 1ms. User: ploni Almoni
+/MyTask.POST took 166ms. User: ploni Almoni
+/MyTask.GET took 2ms. User: ploni Almoni
+/MyTask/20.PUT took 54ms. User: ploni Almoni
+/MyTask.GET took 0ms. User: ploni Almoni
+/MyTask/21.DELETE took 50ms. User: ploni Almoni
+/MyTask.GET took 1ms. User: ploni Almoni
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 1ms. User: unknown
+/MyTask.GET took 1ms. User: ploni Almoni
+/MyTask.GET took 0ms. User: ploni Almoni
+/MyTask/17.PUT took 54ms. User: ploni Almoni
+/MyTask.GET took 0ms. User: ploni Almoni
+/MyTask/4.PUT took 46ms. User: ploni Almoni
+/MyTask.GET took 0ms. User: ploni Almoni
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/site.js.GET took 5ms. User: unknown
+/MyTask.GET took 1ms. User: ploni Almoni
+/MyTask.GET took 0ms. User: ploni Almoni
+/users.html.GET took 2ms. User: unknown
+/css/site.css.GET took 5ms. User: unknown
+/js/users.js.GET took 6ms. User: unknown
+/User.GET took 10ms. User: ploni Almoni
+/User.GET took 2ms. User: ploni Almoni
+/users.html.GET took 0ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/users.js.GET took 1ms. User: unknown
+/User.GET took 0ms. User: ploni Almoni
+/users.html.GET took 1ms. User: unknown
+/js/users.js.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/User.GET took 1ms. User: ploni Almoni
+/users.html.GET took 0ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/users.js.GET took 2ms. User: unknown
+/User.GET took 0ms. User: ploni Almoni
+/User/0.DELETE took 11ms. User: unknown
+/User.GET took 0ms. User: ploni Almoni
+/users.html.GET took 2ms. User: unknown
+/js/users.js.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/User.GET took 0ms. User: ploni Almoni
+/users.html.GET took 2ms. User: unknown
+/js/users.js.GET took 2ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/User.GET took 12ms. User: unknown
+/users.html.GET took 1ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/users.js.GET took 1ms. User: unknown
+/User.GET took 0ms. User: unknown
+/users.html.GET took 2ms. User: unknown
+/css/site.css.GET took 2ms. User: unknown
+/js/users.js.GET took 1ms. User: unknown
+/User.GET took 0ms. User: unknown
+/index.html.GET took 3ms. User: unknown
+/css/site.css.GET took 3ms. User: unknown
+/js/site.js.GET took 4ms. User: unknown
+/login.html.GET took 7ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/login.js.GET took 8ms. User: unknown
+/login.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/login.js.GET took 2ms. User: unknown
+/login.html.GET took 1ms. User: unknown
+/css/site.css.GET took 1ms. User: unknown
+/js/login.js.GET took 1ms. User: unknown
+/Login.POST took 20ms. User: unknown
+/index.html.GET took 1ms. User: unknown
+/css/site.css.GET took 41ms. User: unknown
+/js/site.js.GET took 2ms. User: unknown
+/MyTask.GET took 38ms. User: zn
+/MyTask.GET took 39ms. User: zn
+/MyTask/6.PUT took 42ms. User: zn
+/MyTask.GET took 0ms. User: zn
+/MyTask.POST took 47ms. User: zn
+/MyTask.GET took 0ms. User: zn
+/users.html.GET took 1ms. User: unknown
+/js/users.js.GET took 4ms. User: unknown
+/css/site.css.GET took 5ms. User: unknown
+/User.GET took 4ms. User: zn
+/User.GET took 1ms. User: zn
+/MyTask.POST took 55ms. User: zn
+/MyTask.GET took 0ms. User: zn
+/MyTask.POST took 52ms. User: zn
+/MyTask.GET took 0ms. User: zn
