@@ -171,12 +171,13 @@ else {
         const addNameTextbox = document.getElementById('add-name');
         const addIDUserTextbox=document.getElementById('add-user_Id');
         console.log(addIDUserTextbox.value);
+        //const userId=getUser(addIDUserTextbox.value).id;
        //console.log( users.find(u=>u.user_Id==addIDUserTextbox));
         const item = {
             isDone: false,
             name: addNameTextbox.value.trim(),
             id:0,
-            user_Id:addIDUserTextbox.value.trim()
+            user_Id:0
         };
 
         fetch(uri, {
@@ -221,13 +222,13 @@ else {
 
     function updateItem() {
         const itemId = document.getElementById('edit-id').value;
-        const task=tasks.filter(t=>t.id==itemId);
+        const task=tasks.filter(t=>t.user_Id==itemId);
         console.log(task);
         const item = {
             id: parseInt(itemId, 10),
             isDone: document.getElementById('edit-isDone').checked,
             name: document.getElementById('edit-name').value.trim(),
-            user_Id:task.user_Id
+            user_Id:0
         };
 
         fetch(`${uri}/${itemId}`, {
@@ -298,32 +299,32 @@ else {
         tasks = data;
     }
 
-    // function getUser(){
-    //     console.log('in get user');
-    //     fetch(uri_user, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Content-Type': 'application/json',
-    //             'Authorization': `Bearer ${authToken}`
-    //         },
+    function getUser(id){
+        fetch(`${uri_user}/${id}`, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`
+            },
     
-    //     })
-    //         .then(response => {
-    //             if (response.status != 200) {
-    //                 throw new Error('Failed to fetch data');
-    //             }
-    //             return response.json();
-    //         })
-    //         .then(data =>{
-    //             console.log(data);
-    //             document.getElementById('edit-name').value =data.name;
-    //             document.getElementById('edit-isDone').value=data.isDone;
-    //         })
-    //         .catch(error => {
-    //             console.error('Unable to get my user.', error);
-    //         });
-    // }
+        })
+            .then(response => {
+                if (response.status != 200) {
+                    throw new Error('Failed to fetch data');
+                }
+                return response.json();
+            })
+            .then(data =>{
+                // console.log(data);
+                // document.getElementById('edit-name').value =data.name;
+                // document.getElementById('edit-isDone').value=data.isDone;
+                return data;
+            })
+            .catch(error => {
+                console.error('Unable to get my user.', error);
+            });
+    }
 
     getItems();
 

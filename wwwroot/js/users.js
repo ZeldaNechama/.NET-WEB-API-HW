@@ -21,6 +21,7 @@ getUsers();
     }
 
     function addUser() {
+        displayEditForm();
         const addNameTextbox = document.getElementById('add-name');
         const addPasswordTextBox=document.getElementById('add-password');
 

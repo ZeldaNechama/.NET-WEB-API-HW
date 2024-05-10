@@ -18,7 +18,7 @@ public class LoginServices
                 issuer,
                 issuer,
                 claims,
-                expires: DateTime.Now.AddDays(30.0),
+                expires: DateTime.Now.AddMinutes(10.0),
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
             );
 

@@ -8,6 +8,7 @@ namespace tasks.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[Authorize(Policy="Admin")]
 public class UserController : ControllerBase
 {
     private IUserService userService;

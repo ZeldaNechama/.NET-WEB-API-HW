@@ -51,7 +51,7 @@ public class MyTaskController : ControllerBase
     [HttpPost]
     public IActionResult Post(MyTask newMyTask)
     {
-
+        newMyTask.User_Id = User_Id;
         var newId = myTaskService.Post(newMyTask);
         return CreatedAtAction(nameof(Post), new { id = newId }, newMyTask);
     }
@@ -60,6 +60,7 @@ public class MyTaskController : ControllerBase
     [HttpPut("{id}")]
     public ActionResult Put(int id, MyTask newMyTask)
     {
+        newMyTask.User_Id=User_Id;
         myTaskService.Put(id, newMyTask);
         return Ok();
     }
