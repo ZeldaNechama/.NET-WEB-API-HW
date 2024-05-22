@@ -21,7 +21,6 @@ getUsers();
     }
 
     function addUser() {
-        displayEditForm();
         const addNameTextbox = document.getElementById('add-name');
         const addPasswordTextBox=document.getElementById('add-password');
 
@@ -66,8 +65,7 @@ getUsers();
     }
 
     function displayEditForm(id) {
-        const item = tasks.find(item => item.id === id);
-
+        const item = users.find(item => item.id === id);
         document.getElementById('edit-name').value = item.name;
         document.getElementById('edit-id').value = item.id;
         document.getElementById('edit-isDone').checked = item.isDone;

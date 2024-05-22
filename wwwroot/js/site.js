@@ -156,8 +156,16 @@ else {
         tasks = data;
     }
 
-    function getUser(id){
-        fetch(`${uri_user}/${id}`, {
+    
+
+
+getUser();
+
+    function getUser(){
+        const b=document.getElementById("toUsers");
+   
+
+        fetch(`${uri_user}/GetUser`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -170,13 +178,14 @@ else {
                 if (response.status != 200) {
                     throw new Error('Failed to fetch data');
                 }
+                console.log('res'+response);
                 return response.json();
             })
             .then(data =>{
-                // console.log(data);
-                // document.getElementById('edit-name').value =data.name;
-                // document.getElementById('edit-isDone').value=data.isDone;
-                return data;
+                console.log('data',data);
+                if(data.isAdmin){
+                    b.style.display='inline';
+                }
             })
             .catch(error => {
                 console.error('Unable to get my user.', error);

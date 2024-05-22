@@ -6,7 +6,7 @@ namespace tasks.Interfaces;
       List<User> GetAll();
      // List<MyTask> GetTasks(int id);
       User GetUser(User user);
-      User Get(int id);
+      User Get(int user_id);
       int Post(User user);      
       void Put(int id, User user);
         

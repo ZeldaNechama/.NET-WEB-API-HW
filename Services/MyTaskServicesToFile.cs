@@ -65,7 +65,7 @@ public class MyTaskServicesToFile : IMyTasksServices
     {
         var index = mytasks.FindIndex(t => t.Id == myTask.Id);
         MyTask oldTask=mytasks.FirstOrDefault(t => t.Id == id);
-        myTask.User_Id = oldTask.Id;
+        myTask.User_Id = oldTask.User_Id;
         if (index == -1)
             return;
 

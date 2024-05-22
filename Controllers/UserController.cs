@@ -1,4 +1,3 @@
-// using Microsoft.AspNetCore.Mvc;
 using tasks.Models;
 using tasks.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -8,14 +7,16 @@ namespace tasks.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-[Authorize(Policy="Admin")]
 public class UserController : ControllerBase
 {
     private IUserService userService;
+    private int User_Id;
 
-    public UserController(IUserService userService)
+    public UserController(IUserService userService,IHttpContextAccessor httpContextAccessor)
     {
         this.userService = userService;
+        User_Id = int.Parse(httpContextAccessor.HttpContext?.User?.FindFirst("id")?.Value);
+
     }
 
     [Authorize(Policy = "Admin")]
@@ -26,10 +27,10 @@ public class UserController : ControllerBase
     }
 
     [Authorize(Policy = "User")]
-    [HttpGet("{id}")]
-    public ActionResult<User> Get(int id)
+    [HttpGet("GetUser")]
+    public ActionResult<User> GetUser()
     {
-        var user = userService.Get(id);
+        var user = userService.Get(User_Id);
         if (user == null)
             return NotFound();
         return Ok(user);
