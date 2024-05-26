@@ -68,7 +68,7 @@ getUsers();
         const item = users.find(item => item.id === id);
         document.getElementById('edit-name').value = item.name;
         document.getElementById('edit-id').value = item.id;
-        document.getElementById('edit-isDone').checked = item.isDone;
+        document.getElementById('edit-isAdmin').checked = item.isAdmin;
         document.getElementById('editForm').style.display = 'block';
     }
 
@@ -78,7 +78,7 @@ getUsers();
             id: parseInt(userId, 10),
             isAdmin: document.getElementById('edit-isAdmin').checked,
             name: document.getElementById('edit-name').value.trim(),
-            password:document.getElementById('edit-isAdmin')
+            password:document.getElementById('edit-password').value.trim()
         };
 
         fetch(`${uri}/${userId}`, {
